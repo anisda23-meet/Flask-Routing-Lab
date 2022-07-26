@@ -1,18 +1,18 @@
-from flask import Flask, redirect, request, render_template, url_for
+from flask import Flask, render_template
 
+app = Flask(__name__)
 
-app = Flask(  # Create a flask app
-    __name__,
-    template_folder='templates',  # Name of html file folder
-    static_folder='static'  # Name of directory for static files
-)
+@app.route('/')
+def home():
+	return render_template("home.html")
 
-# Your code should be below
+@app.route('/product')
+def pr():
+	return render_template("product.html")
 
+@app.route('/cart')
+def ca():
+	return render_template("cart.html")
 
-
-
-# Your code should be above
-
-if __name__ == "__main__":  # Makes sure this is the main process
-    app.run(debug=True)
+if __name__ == '__main__':
+	app.run(debug = True)
