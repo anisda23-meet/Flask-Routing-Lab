@@ -4,15 +4,68 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Products</title>
+	<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
 </head>
 <body>
+
+<h2 style="text-align:center">Computers:</h2> <br>
+
+<div class="card">
+  <img width = "200px" src="static/1.jpeg">
+  <h1>Glassy Gaming Computer</h1>
+  <p class="price">$999</p>
+  <p><button>Add to Cart</button></p>
+</div>
+
+<div class="card">
+  <img width = "200px" src="static/2.jpeg">
+  <h1>White Gaming Computer</h1>
+  <p class="price">$1299</p>
+  <p><button>Add to Cart</button></p>
+</div>
+
+<div class="card">
+  <img width = "200px" src="static/3.jpeg">
+  <h1>Ghost Gaming Computer</h1>
+  <p class="price">$1099</p>
+  <p><button>Add to Cart</button></p>
+</div>
 
 	<h1>COMPUTERS</h1> <br>
 	<img width = "200px" src="static/1.jpeg">
 	<img width = "200px" src="static/2.jpeg">
 	<img width = "200px" src="static/3.jpeg">
 
-	<h1> Products:</h1>
 	<h1>PHONES</h1> <br>
 	<img width = "200px" src="static/iphone.jpeg">
 	<img width = "200px" src="static/samsung.jpeg">
@@ -22,10 +75,6 @@
 	<img width = "200px" src="static/adidas.jpeg">
 	<img width = "200px" src="static/nike1.jpeg">
 	<img width = "200px" src="static/nb.jpeg">
-
-	<div>
-		<a href=“{{ url_for(‘pr’) }}”>Product</a>
-	</div>
 
 </body>
 </html>
